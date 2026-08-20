@@ -6,7 +6,6 @@
 }
 
 html {
-    /* Mobile standard view set karne ke liye fixed viewport dimensions */
     width: 1200px;
 }
 
@@ -17,12 +16,6 @@ body {
     line-height: 1.6;
     width: 1200px;
     margin: 0 auto;
-    overflow-x: hidden;
-}
-
-section {
-    min-height: 100vh;
-    padding: 100px 8%;
 }
 
 header {
@@ -62,18 +55,17 @@ nav a:hover {
     color: #00e5ff;
 }
 
+/* HERO SECTION */
 .hero-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    padding: 0 8%;
+    padding: 100px 8% 0;
     width: 100%;
 }
 
 .hero-text {
-    min-height: auto;
-    padding: 0;
     flex: 1;
 }
 
@@ -86,11 +78,6 @@ nav a:hover {
     font-size: 20px;
     font-weight: normal;
     color: #aeb6c5;
-}
-
-.hero-image {
-    min-height: auto;
-    padding: 0;
 }
 
 .hero-image div {
@@ -109,15 +96,39 @@ nav a:hover {
     object-fit: contain;
 }
 
-#About {
+/* GENERAL SECTIONS */
+.content-section {
+    padding: 80px 8%;
     min-height: auto;
-    padding-top: 100px;
-    padding-bottom: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+.content-section h1 {
+    font-size: 45px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.content-section h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin-top: 10px;
+    background: #00e5ff;
+    border-radius: 10px;
+}
+
+.content-section h3 {
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+.content-section h3 + p {
+    color: #aeb6c5;
+    font-size: 17px;
+}
+
+/* ABOUT SECTION */
 #About p {
     max-width: 850px;
     padding: 35px;
@@ -129,80 +140,36 @@ nav a:hover {
     backdrop-filter: blur(10px);
 }
 
-section h1 {
-    font-size: 45px;
-    margin-bottom: 45px;
-    position: relative;
-}
-
-section h1::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    margin-top: 10px;
-    background: #00e5ff;
-    border-radius: 10px;
-}
-
-section h3 {
-    font-size: 22px;
-    margin-top: 30px;
-}
-
-section h3 + p {
-    color: #aeb6c5;
-    font-size: 17px;
-}
-
-body > h1 {
-    padding: 70px 8% 30px;
-    font-size: 45px;
-}
-
-body > h1::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    margin-top: 10px;
-    background: #00e5ff;
-    border-radius: 10px;
-}
-
-body > p {
-    margin: 0 8% 70px;
+/* EXPERIENCE & SKILLS */
+.info-card {
     padding: 35px;
     max-width: 1000px;
-    color: #cbd2df;
-    font-size: 17px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     backdrop-filter: blur(10px);
 }
 
-body > p strong {
+.info-card strong {
     color: #00e5ff;
     font-size: 19px;
 }
 
-section p {
-    color: #cbd2df;
-}
-
-section:nth-last-of-type(3) p {
+.skills-list {
     font-size: 18px;
+    color: #cbd2df;
     word-spacing: 8px;
 }
 
-section div {
+/* PROGRESS BARS */
+.skills-progress div {
     margin-bottom: 25px;
 }
 
-section div p {
+.skills-progress p {
     margin-bottom: 7px;
     font-weight: bold;
+    color: #cbd2df;
 }
 
 progress {
@@ -223,6 +190,7 @@ progress::-webkit-progress-value {
     border-radius: 20px;
 }
 
+/* FORM */
 form {
     max-width: 650px;
     display: flex;
@@ -266,6 +234,7 @@ form button:hover {
     box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
 }
 
+/* FOOTER */
 footer {
     padding: 50px 8%;
     text-align: center;
