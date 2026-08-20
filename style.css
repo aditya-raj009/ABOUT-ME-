@@ -5,11 +5,19 @@
     scroll-behavior: smooth;
 }
 
+html {
+    /* Mobile standard view set karne ke liye fixed viewport dimensions */
+    width: 1200px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #0b0f19;
     color: #ffffff;
     line-height: 1.6;
+    width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 section {
@@ -18,7 +26,7 @@ section {
 }
 
 header {
-    width: 100%;
+    width: 1200px;
     height: 75px;
     padding: 0 8%;
     display: flex;
@@ -54,34 +62,38 @@ nav a:hover {
     color: #00e5ff;
 }
 
-body > section:nth-of-type(1) {
-    min-height: 100vh;
+.hero-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 8%;
+    width: 100%;
 }
 
-body > section:nth-of-type(1) h1 {
-    font-size: clamp(45px, 6vw, 80px);
+.hero-text {
+    min-height: auto;
+    padding: 0;
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 60px;
     margin-bottom: 15px;
 }
 
-body > section:nth-of-type(1) h2 {
+.hero-text h2 {
     font-size: 20px;
     font-weight: normal;
     color: #aeb6c5;
 }
 
-body > section:nth-of-type(2) {
+.hero-image {
     min-height: auto;
-    position: absolute;
-    top: 150px;
-    right: 7%;
     padding: 0;
 }
 
-body > section:nth-of-type(2) div {
+.hero-image div {
     width: 380px;
     height: 380px;
     display: flex;
@@ -91,7 +103,7 @@ body > section:nth-of-type(2) div {
     backdrop-filter: blur(10px);
 }
 
-body > section:nth-of-type(2) img {
+.hero-image img {
     width: 90%;
     height: 90%;
     object-fit: contain;
@@ -222,7 +234,7 @@ form label {
     color: #cbd2df;
 }
 
-form input {
+form input, form textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -230,9 +242,10 @@ form input {
     background: #151b28;
     color: white;
     outline: none;
+    font-family: inherit;
 }
 
-form input:focus {
+form input:focus, form textarea:focus {
     border-color: #00e5ff;
 }
 
@@ -267,238 +280,4 @@ footer h3 {
 footer p {
     color: #8f99aa;
     margin: 5px;
-}
-
-@media (max-width: 900px) {
-    header {
-        padding: 0 5%;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-    body > section:nth-of-type(1) {
-        padding: 100px 6% 30px;
-    }
-
-    body > section:nth-of-type(2) {
-        position: relative;
-        top: auto;
-        right: auto;
-        display: flex;
-        justify-content: center;
-        padding: 20px 6% 40px;
-    }
-
-    body > section:nth-of-type(2) div {
-        width: 300px;
-        height: 300px;
-    }
-
-    section {
-        min-height: auto;
-        padding: 70px 6%;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        height: 75px;
-        padding: 0 5%;
-        flex-direction: row;
-    }
-
-    header h1 {
-        font-size: 21px;
-        letter-spacing: 1px;
-    }
-
-    nav {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
-
-    nav a {
-        font-size: 9px;
-    }
-
-    body > section:nth-of-type(1) {
-        min-height: 65vh;
-        padding: 100px 6% 20px;
-        text-align: left;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    body > section:nth-of-type(1) h1 {
-        font-size: clamp(36px, 11vw, 55px);
-        line-height: 1.1;
-        margin-bottom: 12px;
-    }
-
-    body > section:nth-of-type(1) h2 {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    body > section:nth-of-type(2) {
-        position: relative;
-        top: auto;
-        right: auto;
-        min-height: auto;
-        width: 100%;
-        padding: 5px 5% 30px;
-        display: flex;
-        justify-content: center;
-    }
-
-    body > section:nth-of-type(2) div {
-        width: min(75vw, 280px);
-        height: min(75vw, 280px);
-    }
-
-    body > section:nth-of-type(2) img {
-        width: 90%;
-        height: 90%;
-    }
-
-    section {
-        min-height: auto;
-        padding: 55px 6%;
-    }
-
-    section h1 {
-        font-size: 32px;
-        margin-bottom: 25px;
-    }
-
-    section h1::after {
-        width: 50px;
-        height: 3px;
-        margin-top: 7px;
-    }
-
-    #About {
-        min-height: auto;
-        padding: 55px 6%;
-    }
-
-    #About p {
-        padding: 22px;
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-    section h3 {
-        font-size: 19px;
-        margin-top: 20px;
-    }
-
-    section h3 + p {
-        font-size: 15px;
-    }
-
-    body > h1 {
-        padding: 55px 6% 20px;
-        font-size: 32px;
-    }
-
-    body > p {
-        margin: 0 6% 50px;
-        padding: 22px;
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    body > p strong {
-        font-size: 17px;
-    }
-
-    section:nth-last-of-type(3) p {
-        font-size: 15px;
-        word-spacing: 3px;
-        line-height: 1.8;
-    }
-
-    section div {
-        margin-bottom: 18px;
-    }
-
-    section div p {
-        margin-bottom: 5px;
-        font-size: 14px;
-    }
-
-    progress {
-        height: 8px;
-    }
-
-    form {
-        width: 100%;
-        gap: 14px;
-    }
-
-    form input {
-        padding: 13px;
-        font-size: 14px;
-    }
-
-    form button {
-        width: 180px;
-        padding: 13px;
-    }
-
-    footer {
-        padding: 40px 6% 25px;
-    }
-
-    footer h3 {
-        font-size: 18px;
-    }
-
-    footer p {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 380px) {
-    header h1 {
-        font-size: 18px;
-    }
-
-    nav {
-        gap: 7px;
-    }
-
-    nav a {
-        font-size: 8px;
-    }
-
-    body > section:nth-of-type(1) {
-        padding-top: 95px;
-    }
-
-    body > section:nth-of-type(1) h1 {
-        font-size: 34px;
-    }
-
-    body > section:nth-of-type(2) div {
-        width: 240px;
-        height: 240px;
-    }
-
-    section {
-        padding-top: 45px;
-        padding-bottom: 45px;
-    }
-
-    section h1 {
-        font-size: 28px;
-    }
 }
