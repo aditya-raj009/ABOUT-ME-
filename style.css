@@ -55,13 +55,13 @@ nav a:hover {
     color: #00e5ff;
 }
 
-/* HERO SECTION */
+/* HERO SECTION (Header ke bilkul paas shift kar diya gaya hai) */
 .hero-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
-    padding: 100px 8% 0;
+    min-height: calc(100vh - 75px);
+    padding: 75px 8% 0; /* Padding top ko 100px se ghata kar 75px kar diya gaya hai */
     width: 100%;
 }
 
@@ -98,7 +98,7 @@ nav a:hover {
 
 /* GENERAL SECTIONS */
 .content-section {
-    padding: 80px 8%;
+    padding: 40px 8%; /* Extra gap reduce kar ke 40px kar diya gaya hai */
     min-height: auto;
 }
 
@@ -128,7 +128,12 @@ nav a:hover {
     font-size: 17px;
 }
 
-/* ABOUT SECTION */
+/* ABOUT SECTION (Extra space fixed) */
+#About {
+    padding-top: 20px; /* Top gap kam kiya gaya hai */
+    padding-bottom: 40px;
+}
+
 #About p {
     max-width: 850px;
     padding: 35px;
