@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,29 +13,32 @@
     <header>
         <h1>&lt;AR/&gt;</h1>
         <nav>
-            <a href="#">HOME</a>
-            <a href="#">EDUCATION</a>
-            <a href="#">EXPERIENCE</a>
-            <a href="#">SKILLS</a>
-            <a href="#">PROGRESS</a>
-            <a href="#">CONTACT</a>
+            <a href="#Home">HOME</a>
+            <a href="#About">ABOUT</a>
+            <a href="#Education">EDUCATION</a>
+            <a href="#Experience">EXPERIENCE</a>
+            <a href="#Skills">SKILLS</a>
+            <a href="#Progress">PROGRESS</a>
+            <a href="#Contact">CONTACT</a>
         </nav>
     </header>
 
-    <div class="hero-container">
-        <section class="hero-text">
+    <!-- HERO / GIF SECTION -->
+    <section id="Home" class="hero-container">
+        <div class="hero-text">
             <h1>Hello, I'm Aditya raj</h1>
             <h2>IITP•Robotics club•Ex-Anlytical Arena</h2>
-        </section>
+        </div>
 
-        <section class="hero-image">
+        <div class="hero-image">
             <div>
                 <img src="animationn.gif" alt="Animation">
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <section id="About">
+    <!-- ABOUT SECTION -->
+    <section id="About" class="content-section">
         <p>
             Hello, I'm Aditya Raj, a BS Computer Science student at IIT Patna with a
             strong passion for technology and problem-solving. I am particularly
@@ -65,7 +68,8 @@
         </p>
     </section>
 
-    <section>
+    <!-- EDUCATION SECTION -->
+    <section id="Education" class="content-section">
         <h1>EDUCATION</h1>
 
         <h3>Secondary Education</h3>
@@ -78,106 +82,117 @@
         <p>Indian Institute of Technology Patna</p>
     </section>
 
-    <h1>EXPERIENCE</h1>
+    <!-- EXPERIENCE SECTION -->
+    <section id="Experience" class="content-section">
+        <h1>EXPERIENCE</h1>
 
-    <p>
-        <strong>Gym Management Website</strong><br>
-        Developed a gym management website with features for managing
-        members, records and gym-related activities.
-        <br><br>
+        <div class="info-card">
+            <p>
+                <strong>Gym Management Website</strong><br>
+                Developed a gym management website with features for managing
+                members, records and gym-related activities.
+                <br><br>
 
-        <strong>Capstone Project - Smart Calculator Website</strong><br>
-        Developed a smart calculator website as a college capstone project
-        with a team of 5 members using HTML, CSS, JavaScript, PHP and MySQL.
-        <br><br>
+                <strong>Capstone Project - Smart Calculator Website</strong><br>
+                Developed a smart calculator website as a college capstone project
+                with a team of 5 members using HTML, CSS, JavaScript, PHP and MySQL.
+                <br><br>
 
-        <strong>Analytical Arena - Club Member</strong><br>
-        Member of Analytical Arena, a college club focused on analytical
-        thinking, technical activities and problem-solving.
-        <br><br>
+                <strong>Analytical Arena - Club Member</strong><br>
+                Member of Analytical Arena, a college club focused on analytical
+                thinking, technical activities and problem-solving.
+                <br><br>
 
-        <strong>Mech-X Robotics Club - Member</strong><br>
-        Currently working with the Mech-X Robotics Club on Arduino and
-        robotics-based projects.
-        <br><br>
+                <strong>Mech-X Robotics Club - Member</strong><br>
+                Currently working with the Mech-X Robotics Club on Arduino and
+                robotics-based projects.
+                <br><br>
 
-        <strong>Arduino Robotics Projects</strong><br>
-        Built an Arduino-based robotic hand and a smart object detection
-        system using sensors, servo motors, LEDs and a buzzer.
-    </p>
+                <strong>Arduino Robotics Projects</strong><br>
+                Built an Arduino-based robotic hand and a smart object detection
+                system using sensors, servo motors, LEDs and a buzzer.
+            </p>
+        </div>
+    </section>
 
-    <section>
+    <!-- SKILLS SECTION -->
+    <section id="Skills" class="content-section">
         <h1>SKILLS</h1>
-        <p>
+        <p class="skills-list">
             Python • C++ • HTML • CSS • JavaScript • SQL •
             MySQL • Git • GitHub • Arduino • Robotics •
             Machine Learning • Data Science
         </p>
     </section>
 
-    <section>
-        <div>
-            <p>PYTHON</p>
-            <progress value="70" max="100"></progress>
-        </div>
+    <!-- PROGRESS SECTION -->
+    <section id="Progress" class="content-section">
+        <h1>PROGRESS</h1>
+        <div class="skills-progress">
+            <div>
+                <p>PYTHON</p>
+                <progress value="70" max="100"></progress>
+            </div>
 
-        <div>
-            <p>C++</p>
-            <progress value="80" max="100"></progress>
-        </div>
+            <div>
+                <p>C++</p>
+                <progress value="80" max="100"></progress>
+            </div>
 
-        <div>
-            <p>HTML</p>
-            <progress value="90" max="100"></progress>
-        </div>
+            <div>
+                <p>HTML</p>
+                <progress value="90" max="100"></progress>
+            </div>
 
-        <div>
-            <p>CSS</p>
-            <progress value="70" max="100"></progress>
-        </div>
+            <div>
+                <p>CSS</p>
+                <progress value="70" max="100"></progress>
+            </div>
 
-        <div>
-            <p>JAVASCRIPT</p>
-            <progress value="50" max="100"></progress>
-        </div>
+            <div>
+                <p>JAVASCRIPT</p>
+                <progress value="50" max="100"></progress>
+            </div>
 
-        <div>
-            <p>MYSQL</p>
-            <progress value="70" max="100"></progress>
-        </div>
+            <div>
+                <p>MYSQL</p>
+                <progress value="70" max="100"></progress>
+            </div>
 
-        <div>
-            <p>GIT</p>
-            <progress value="30" max="100"></progress>
-        </div>
+            <div>
+                <p>GIT</p>
+                <progress value="30" max="100"></progress>
+            </div>
 
-        <div>
-            <p>GITHUB</p>
-            <progress value="70" max="100"></progress>
-        </div>
+            <div>
+                <p>GITHUB</p>
+                <progress value="70" max="100"></progress>
+            </div>
 
-        <div>
-            <p>ARDUINO</p>
-            <progress value="70" max="100"></progress>
-        </div>
+            <div>
+                <p>ARDUINO</p>
+                <progress value="70" max="100"></progress>
+            </div>
 
-        <div>
-            <p>ROBOTICS</p>
-            <progress value="30" max="100"></progress>
-        </div>
+            <div>
+                <p>ROBOTICS</p>
+                <progress value="30" max="100"></progress>
+            </div>
 
-        <div>
-            <p>MACHINE LEARNING</p>
-            <progress value="40" max="100"></progress>
-        </div>
+            <div>
+                <p>MACHINE LEARNING</p>
+                <progress value="40" max="100"></progress>
+            </div>
 
-        <div>
-            <p>DATA SCIENCE</p>
-            <progress value="30" max="100"></progress>
+            <div>
+                <p>DATA SCIENCE</p>
+                <progress value="30" max="100"></progress>
+            </div>
         </div>
     </section>
 
-    <section>
+    <!-- CONTACT SECTION -->
+    <section id="Contact" class="content-section">
         <h2>Get In Touch</h2>
         <form>
             <label for="name">Name:</label>
